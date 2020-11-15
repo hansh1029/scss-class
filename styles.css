@@ -7,10 +7,10 @@
     /* Cross Axis */
     /* align-items: stretch; */
     /* Corss Aixs modify lines betwen elements default is space-around */
-    align-content: space-between;
+    /* align-content: space-between; */
     height: 100vh;
     /* wrap keeps children's size, nowrap(defualt) keeps children are on a row */
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .child {
@@ -24,13 +24,18 @@
     align-items: center;
 }
 
-/* .child:nth-child(2){
+.child:nth-child(2){
+    background: #000;
+    /* flex-grow default is 0 */
+    /* flex-grow: 1; */
+    /* flex-shirink default is 1 */
+    /* flex-shrink: 2; */
     /* defualt order is 0 */
-    order: 1;
+    /* order: 1; */
     /* Cross Axis, same with align-times but it is only for one element*/
-    align-self: center;
+    /* align-self: center; */
 }
 
-.child:nth-child(3){
+/* .child:nth-child(3){
     align-self: flex-end;
 } */
