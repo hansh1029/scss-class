@@ -7,11 +7,12 @@ body {
     display: grid;
     gap: 5px;
     /* height: 250vh; */
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
+    /* grid-template-columns: repeat(5, minmax(100px, 5fr)); */
+    /* grid-template-rows: repeat(4, 100px); */
     grid-auto-rows: 100px;
-    grid-auto-flow: column;
-    grid-auto-columns: 100px;
+    margin-bottom: 30px;
+    /* grid-auto-flow: column; */
+    /* grid-auto-columns: 100px; */
     /* modify grid */
     /* justify-content: center; */
     /* modify grid line */
@@ -34,6 +35,13 @@ body {
     "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr; */
 }
 
+.grid:first-child {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  
+  .grid:last-child {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }  
 
 .item:nth-child(odd) {
     background-color: #2ecc71;
