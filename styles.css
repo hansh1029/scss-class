@@ -5,8 +5,12 @@
     /* Main Axis */
     justify-content: space-around;
     /* Cross Axis */
-    align-items: stretch;
+    /* align-items: stretch; */
+    /* Corss Aixs modify lines betwen elements default is space-around */
+    align-content: space-between;
     height: 100vh;
+    /* wrap keeps children's size, nowrap(defualt) keeps children are on a row */
+    flex-wrap: wrap;
 }
 
 .child {
@@ -15,9 +19,12 @@
     background: peru;
     color: white;
     font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.child:nth-child(2){
+/* .child:nth-child(2){
     /* defualt order is 0 */
     order: 1;
     /* Cross Axis, same with align-times but it is only for one element*/
@@ -26,4 +33,4 @@
 
 .child:nth-child(3){
     align-self: flex-end;
-}
+} */
