@@ -5,34 +5,40 @@ body {
 
 .grid {
     display: grid;
+    gap: 5px;
     height: 50vh;
-    /* grid-template-columns: repeat(4, fr1);
-    grid-template-rows: repeat(4, fr1); */
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    /* modify position of elements in grid */
+    /* vertical */
+    /* justify-items: stretch; */
+    /* horizontal */
+    /* align-items: stretch; */
+    place-items: stretch center;
     /* grid-template-areas:
         "header header header header"
         "content content content nav"
         "content content content nav"
         "footer footer footer footer"; */
-    grid-template:
+    /* grid-template:
     "header header header header" 1fr
     "content content content nav" 2fr
-    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr;
+    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr; */
 }
 
 .header {
     background-color: #2ecc71;
-    grid-area: header;
+    /* grid-area: header; */
 }
 .content {
     background-color: #3498db;
-    grid-area: content;
+    /* grid-area: content; */
 }
 .nav {
     background-color: #8e44ad;
-    grid-area: nav;
+    /* grid-area: nav; */
 }
 .footer {
     background-color: #f39c12;
-    grid-area: footer;
+    /* grid-area: footer; */
 }
