@@ -6,15 +6,20 @@ body {
 .grid {
     display: grid;
     gap: 5px;
-    height: 50vh;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    height: 250vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    /* modify grid */
+    /* justify-content: center; */
+    /* modify grid line */
+    /* align-content: space-around; */
+    place-content: end center;
     /* modify position of elements in grid */
     /* vertical */
     /* justify-items: stretch; */
     /* horizontal */
     /* align-items: stretch; */
-    place-items: stretch center;
+    /* place-items: stretch center; */
     /* grid-template-areas:
         "header header header header"
         "content content content nav"
