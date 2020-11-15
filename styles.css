@@ -1,13 +1,29 @@
-.wrapper {
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
+.father {
+    /* flex container */
+    display: flex;
+    /* flex-direction: column; */
+    /* Main Axis */
+    justify-content: space-around;
+    /* Cross Axis */
+    align-items: stretch;
     height: 100vh;
 }
 
-.box {
+.child {
     width: 200px;
     height: 200px;
     background: peru;
     color: white;
+    font-size: 50px;
+}
+
+.child:nth-child(2){
+    /* defualt order is 0 */
+    order: 1;
+    /* Cross Axis, same with align-times but it is only for one element*/
+    align-self: center;
+}
+
+.child:nth-child(3){
+    align-self: flex-end;
 }
