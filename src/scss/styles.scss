@@ -2,6 +2,20 @@
 @import "_mixins";
 @import "_buttons";
 
+// awsome mixins
+h1 {
+  color: red;
+  @include responsive("iphone") {
+    color: yellow;
+  }
+  @include responsive("iphone-l") {
+    font-size: 60px;
+  }
+  @include responsive("tablet") {
+    color: green;
+  }
+}
+
 //extend. % is extend mark
 a {
   @extend %button;
