@@ -1,10 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Caladea:400&display=swap");
 @import "_variables";
+@import "_titles";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    @extend %miniTitle;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 0px, 140px;
+  font-family: "Caladea";
+  padding: 0px 140px;
+  padding-top: 75px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0px 140px;
+  background-color: white;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-transform: uppercase;
+    @extend %miniTitle;
+    ul {
+        display: flex;
+      &:first-child {
+        li {
+            margin-right: 40px;
+            color: red;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: 
+        // linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://images.unsplash.com/photo-1534944845791-f9e35a201bf8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    h4 {
+        @extend %miniTitle;
+        margin-bottom: 40px;
+    }
+    h3 {
+        font-size: 50px;
+        width: 40%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    a {
+        width: 20%;
+        background-color: none;
+        border: 1px solid #000;
+        padding: 20px 0px;
+        color: black;
+        font-weight: 400;
+        transition: color 0.2s linear, background 0.2s linear;
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+}
+
+.under-hero {
+    height: 80vh;
+    width: 100%;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: stretch;
+    img {
+        width: 50%;
+    }
+    .under-hero__content {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $bg;
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h4 {
+                @extend %miniTitle;
+                margin-bottom: 40px;
+            }
+            h3 {
+                font-size: 30px;
+                width: 60%;
+                text-align: center;
+                line-height: 30px;
+                margin-bottom: 50px;
+                opacity: 70%;
+            }
+            a {
+                width: 30%;
+                background-color: none;
+                border: 1px solid #000;
+                padding: 20px 0px;
+                color: black;
+                font-weight: 400;
+                transition: color 0.2s linear, background 0.2s linear;
+                &:hover {
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+    }
 }
