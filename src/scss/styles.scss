@@ -214,6 +214,8 @@ header {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   .gallery__post {
+    height: 100%;
+    cursor: pointer;
   }
   img {
     width: 100%;
