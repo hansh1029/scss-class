@@ -56,3 +56,29 @@ header {
     }
   }
 }
+
+main {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: repeat(auto-fill, 1fr);
+  grid-auto-rows: 50vh;
+  article {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10fr 0.8fr;
+    img {
+      min-width: 100%;
+      height: 100%;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      padding-left: 10px;
+      h3 {
+          font-size: 14px;
+      }
+    }
+  }
+}
