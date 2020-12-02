@@ -18,6 +18,9 @@ a {
 }
 
 header {
+  background-color: #fff;
+  z-index: 9999;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
   position: fixed;
   top: 0;
   left: 0;
@@ -86,7 +89,7 @@ header {
 
 .banner {
   background-color: #efcb56;
-  height: 40vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,5 +115,51 @@ header {
 }
 
 .gallery {
-    display: grid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 50vh;
+  .gallery__item {
+    background-size: cover;
+    background-position: center;
+    background-image: url("https://source.unsplash.com/random/");
+    transition: all 0.2s linear;
+    cursor: pointer;
+    overflow: hidden;
+    &:first-child,
+    &:nth-child(5),
+    &:nth-child(7),
+    &:nth-child(10) {
+      grid-column-start: span 2;
+    }
+    &:hover {
+      filter: blur(50px);
+    }
+  }
+}
+
+footer {
+  background-color: #535851;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  font-family: "Yrsa";
+  font-weight: 400;
+  padding: 13%;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    li {
+      width: 100%;
+      font-size: 20px;
+      color: #fefefe;
+      text-align: left;
+      margin-bottom: 12px;
+      &:first-child {
+        color: #a1a4a0;
+      }
+    }
+  }
 }
