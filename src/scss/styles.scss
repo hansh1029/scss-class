@@ -1,9 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=B612+Mono&family=DM+Serif+Display:ital@0;1&display=swap");
 @import "_variables";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "DM Serif Display", monospace;
+  padding: 45px;
+}
+
+header {
+  background-color: black;
+  border: 1px solid black;
+  margin-bottom: 130px;
+  nav {
+    ul {
+      display: grid;
+      gap: 1px;
+      // padding: 1px;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(2, 60px);
+      font-weight: 900;
+      letter-spacing: 1.1px;
+      li {
+        // width: 100%;
+        // height: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:nth-child(1),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8) {
+          grid-column-start: span 2;
+        }
+        &:nth-child(2) {
+          grid-column-start: span 4;
+          text-transform: uppercase;
+          font-size: 28px;
+        }
+        &:nth-child(5) {
+          color: blue;
+        }
+      }
+    }
+  }
+}
+
+main {
+  h1,
+  h6 {
+    text-align: center;
+  }
+  h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  h6 {
+    font-family: "B612 Mono";
+    font-size: 12px;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
+  }
+}
+
+.main__img {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 140px;
+  .main__img__left {
+    width: 50%;
+    height: 760px;
+    background-image: url("https://cdn.shopify.com/s/files/1/0092/9605/2282/files/new-frontpage-2-split_01_67bc0f97-8be3-4ac1-a71c-4fbf8ddd3a34_900x.jpg?v=1604573876");
+    background-size: cover;
+  }
+  .main__img__right {
+    width: 50%;
+    height: 760px;
+    background-image: url("https://cdn.shopify.com/s/files/1/0092/9605/2282/files/new-frontpage-2-split_02_8a621ee9-20b8-4d4c-a827-20a12396a17e_900x.jpg?v=1604573977");
+    background-size: cover;
+  }
+}
+
+h4 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 80vh;
+  margin-bottom: 150px;
+  .hero__img {
+    background-image: url("https://source.unsplash.com/random/");
+    background-position: center center;
+    background-size: cover;
+    &:first-child {
+      background-image: url("https://source.unsplash.com/random/1");
+    }
+  }
 }
