@@ -14,6 +14,7 @@ header {
   background-color: black;
   border: 1px solid black;
   margin-bottom: 130px;
+  cursor: pointer;
   nav {
     ul {
       display: grid;
@@ -70,6 +71,7 @@ main {
 }
 
 .main__img {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   margin-bottom: 140px;
@@ -121,6 +123,7 @@ main {
     text-align: center;
   }
   .wrapper {
+    cursor: pointer;
     border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -160,6 +163,7 @@ main {
 }
 
 footer {
+  cursor: pointer;
   margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
