@@ -9,5 +9,9 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding-top: 70px;
   height: 100vh;
-  background-color: $bg;
+  background-color: $bg;  
+  display: grid;
+  grid-template-columns: 1.5fr 1.9fr 1.5fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-gap: 1px;
 }
